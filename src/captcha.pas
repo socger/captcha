@@ -2,9 +2,7 @@
   Captcha plugin.
   Copyright (C) 2012-2014 Silvio Clecio.
 
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  Please see the LICENSE file.
 *)
 
 unit Captcha;

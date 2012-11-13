@@ -14,6 +14,6 @@ Steps to run this demo
 
 On Windows, copy the DLLs "freetype-6.dll" and "zlib1.dll" and the font "LiberationSerif-Regular.ttf" to your project folder.
 
-On Linux, copy the font "LiberationSerif-Regular.ttf" to project folder.
+On Linux, copy the font "LiberationSerif-Regular.ttf" to your project folder.
 
 Enjoy!

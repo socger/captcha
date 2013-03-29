@@ -8,15 +8,10 @@ uses
   BrookAction, BrookActionHelper, Captcha, RUtils, Classes, SysUtils;
 
 type
-
-  { TTest }
-
   TTest = class(TBrookAction)
   public
-    procedure Get(ARequest: TBrookRequest;
-      {%H-}AResponse: TBrookResponse); override;
-    procedure Post({%H-}ARequest: TBrookRequest;
-      {%H-}AResponse: TBrookResponse); override;
+    procedure Get; override;
+    procedure Post; override;
   end;
 
 const
@@ -29,7 +24,7 @@ const
     '</head>'+lf+
     '<body>'+lf+
     '<img src="data:image/gif;base64,%s"/>'+lf+
-    '	<form action="%s" method="post">'+lf+
+    '	<form autocomplete="off" action="" method="post">'+lf+
     '		<input type="text" name="captcha"/>'+lf+
     '		<input type="submit"/>'+lf+
     '	</form>'+lf+
@@ -41,7 +36,7 @@ implementation
 uses
   FPWritePNG;
 
-procedure TTest.Get(ARequest: TBrookRequest; AResponse: TBrookResponse);
+procedure TTest.Get;
 var
   VImage: TMemoryImage;
   VStream: TMemoryStream;
@@ -52,15 +47,15 @@ begin
   VStream := TMemoryStream.Create;
   try
     SetCookie('captcha', TCaptcha.Generate(VStream));
-    VStream.Position := 0;
-    Write(FORM, [StreamToBase64(VStream), ARequest.ScriptName]);
+    VStream.Seek(0, 0);
+    Write(FORM, [StreamToBase64(VStream)]);
   finally
     VStream.Free;
     VImage.Free;
   end;
 end;
 
-procedure TTest.Post(ARequest: TBrookRequest; AResponse: TBrookResponse);
+procedure TTest.Post;
 begin
   if SameText(Fields['captcha'].AsString, GetCookie('captcha')) then
     Write('OK')

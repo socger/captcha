@@ -5,7 +5,7 @@ unit test;
 interface
 
 uses
-  BrookAction, BrookActionHelper, Captcha, RUtils, Classes, SysUtils;
+  BrookAction, Captcha, RUtils, Classes, SysUtils;
 
 type
   TTest = class(TBrookAction)
@@ -57,7 +57,7 @@ end;
 
 procedure TTest.Post;
 begin
-  if SameText(Fields['captcha'].AsString, GetCookie('captcha')) then
+  if SameText(Fields.Values['captcha'], GetCookie('captcha')) then
     Write('OK')
   else
     Write('Fail');

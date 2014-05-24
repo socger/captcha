@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <Package Version="4">
     <PathDelim Value="\"/>
@@ -21,7 +21,7 @@
     <Description Value="Nowadays, Pascal is fully immersed in web development world. Therefore, it faces the severe issue of spams.
 This plugin provides the handling of verification images, usually to block the free and automatic access in login pages."/>
     <License Value="Please see the LICENSE file."/>
-    <Version Release="1"/>
+    <Version Major="1"/>
     <Files Count="1">
       <Item1>
         <Filename Value="..\src\captcha.pas"/>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
     <Version Value="9"/>
@@ -48,12 +48,6 @@
         <Filename Value="cgi1.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="cgi1"/>
-        <UsageCount Value="20"/>
-      </Unit0>
-      <Unit1>
-        <Filename Value="test.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="test"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
@@ -61,6 +55,12 @@
         <CursorPos X="1" Y="1"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="test.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="test"/>
+        <UsageCount Value="20"/>
       </Unit1>
       <Unit2>
         <Filename Value="brokers.pas"/>
@@ -74,7 +74,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="cgi1" ApplyConventions="False"/>
+      <Filename Value="cgi1.bf" ApplyConventions="False"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
